@@ -104,6 +104,11 @@ module Precious
       @css = settings.wiki_options[:css]
       @js  = settings.wiki_options[:js]
       @mathjax_config = settings.wiki_options[:mathjax_config]
+      #QND hook for calculating page names based on pattern
+      # todo be able to define a pattern, defualt KB#####, where # is a numeric
+      # list current pages, take the last one and then increment and define
+      # is this the right position? conflicts? Concurrency?
+      @next_filename="KB123 -" if settings.wiki_options[:kbnum]
     end
 
     get '/' do

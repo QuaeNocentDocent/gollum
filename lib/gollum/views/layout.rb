@@ -39,7 +39,10 @@ module Precious
       def js # custom js
         @js
       end
-
+      
+      def next_filename
+	      @next_filename #QND - from app.rb
+      end
     end
   end
 end
